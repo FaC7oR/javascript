@@ -1,0 +1,255 @@
+/* EASTER EGG */
+
+@media screen and (max-width: 319px){
+
+    body{
+        display: block;
+    }
+
+    .easteregg{
+        display: block;
+    }
+
+    header{
+        display: none;
+    }
+
+    section{
+        display: none;
+    }
+
+    nav{
+        display: none;
+    }
+
+    footer{
+        display: none;
+    }
+
+    .easteregg{
+        display: block;
+    }
+    
+}
+
+/* DEFINIMOS LAS CARACTERISTICAS RESPONSIVE PARA 320px */
+
+@media screen and (min-width: 320px){
+
+    body{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 100px auto auto 140px;
+        grid-template-areas: "header" "nav" "section" "footer";
+    }  
+
+    header{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 54px 48px;
+        grid-template-areas: "titulo" "search";
+    }
+
+    nav{
+        display: block;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    li{
+        display: block;
+        text-align: center;
+    }
+
+    .footerflex{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .formbuttondistribution{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .easteregg{
+        display: none;
+    }
+
+}
+
+/* DEFINIMOS LAS CARACTERISTICAS RESPONSIVE PARA 768px */
+
+@media screen and (min-width: 768px){
+
+    body{
+        display: grid;
+        grid-template-columns: 220px auto;
+        grid-template-rows: 100px auto 108px;
+        grid-template-areas: "header header" "nav section" "footer footer";
+    }  
+
+    header{
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: 54px 48px;
+        grid-template-areas: "titulo" "search";
+    }
+
+    nav{
+        display: block;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    li{
+        display: block;
+        text-align: left;
+    }
+
+    .footerflex{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .easteregg{
+        display: none;
+    }
+
+}
+
+/* DEFINIMOS LAS CARACTERISTICAS RESPONSIVE PARA 1200px */
+
+@media screen and (min-width: 1200px){
+
+    body{
+        display: grid;
+        grid-template-columns: 220px auto;
+        grid-template-rows: 54px auto 108px;
+        grid-template-areas: "header header" "nav section" "footer footer";
+    }  
+
+    header{
+        display: grid;
+        grid-template-columns: 390px auto 170px;
+        grid-template-rows: 54px;
+        grid-template-areas: "titulo search";
+    }
+
+    nav{
+        display: block;
+    }
+
+    section{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    li{
+        display: block;
+        text-align: left;
+    }
+
+    .footerflex{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .easteregg{
+        display: none;
+    }
+
+}
+
+/* DEFINIMOS LAS CARACTERISTICAS GENERALES */
+
+header{
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+}
+
+section{
+    grid-area: section;
+}
+
+section.chart{
+    align-items: flex-start;
+}
+
+section.contactform{
+    align-items: flex-start;
+}
+
+section.contactdescription{
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+footer{
+    grid-area: footer;
+}
+
+div#titulo{
+    grid-area: titulo;
+    justify-self: center;
+}
+
+div#search{
+    grid-area: search;
+    display: flex;
+    vertical-align: top;
+    justify-content: center;
+}
+
+.buscador{
+    vertical-align: top;
+}
+
+.productos{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.item{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}

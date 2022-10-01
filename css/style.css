@@ -1,0 +1,245 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* DEFINIMOS LAS CARACTERISTICAS RESPONSIVE PARA 320px */
+
+@media screen and (min-width: 320px) {
+  div #titulo {
+    width: auto;
+    text-align: center;
+  }
+  div .footerflex a {
+    margin: 0px;
+  }
+  header {
+    padding-left: 0px;
+  }
+  li {
+    padding-left: 0px;
+  }
+  section img {
+    height: 200px;
+    width: 200px;
+  }
+  section .chart {
+    height: calc(100vh - 202px);
+  }
+  #consulta {
+    height: 8em;
+    width: 13em;
+  }
+  .buscador {
+    margin-top: 0px;
+  }
+  .searchbutton {
+    margin-top: 0px;
+  }
+  .ytvideo {
+    height: 158px;
+    width: 280px;
+  }
+}
+
+/* DEFINIMOS LAS CARACTERISTICAS RESPONSIVE PARA 768px */
+
+@media screen and (min-width: 768px) {
+  div #titulo {
+    width: auto;
+    text-align: center;
+  }
+  div .footerflex a {
+    margin: 0px 12px 0px 12px;
+  }
+  header {
+    padding-left: 16px;
+  }
+  li {
+    padding-left: 16px;
+  }
+  section img {
+    height: 200px;
+    width: 200px;
+  }
+  section .chart {
+    height: calc(100vh - 162px);
+  }
+  #consulta {
+    height: 10em;
+    width: 18em;
+  }
+  .buscador {
+    margin-top: 0px;
+  }
+  .searchbutton {
+    margin-top: 0px;
+  }
+  .ytvideo {
+    height: 315px;
+    width: 560px;
+  }
+}
+
+/* DEFINIMOS LAS CARACTERISTICAS RESPONSIVE PARA 1200px */
+
+@media screen and (min-width: 1200px) {
+  div #titulo {
+    width: 300px;
+  }
+  div .footerflex a {
+    margin: 0px 12px 0px 12px;
+  }
+  header {
+    padding-left: 16px;
+  }
+  li {
+    padding-left: 16px;
+  }
+  section img {
+    height: 200px;
+    width: 200px;
+  }
+  section .chart {
+    height: calc(100vh - 162px);
+  }
+  #consulta {
+    height: 10em;
+    width: 18em;
+  }
+  .buscador {
+    margin-top: 7px;
+  }
+  .searchbutton {
+    margin-top: 7px;
+  }
+  .ytvideo {
+    height: 315px;
+    width: 560px;
+  }
+}
+
+/* DEFINIMOS LAS CARACTERISTICAS GENERALES */
+
+a {
+  text-decoration: none;
+  color: #dadada;
+}
+
+body {
+  font-family: Oswald, sans-serif;
+}
+
+footer {
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  background-color: #cccccc;
+  color: #666666;
+}
+
+footer div a {
+  padding-top: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  text-decoration: none;
+  color: #666666;
+}
+
+header {
+  font-family: 'Bangers', cursive;
+  font-weight: 700;
+  font-size: 36px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: #00a2ff;
+  color: white;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px #000000;
+}
+
+li {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-bottom-style: solid;
+  border-bottom-color: #858585;
+  border-bottom-width: 1px;
+}
+
+nav {
+  background-color: #202020;
+}
+
+section {
+  background-color: #eeeeee;
+  padding: 12px 12px 0px 12px;
+  text-align: justify;
+}
+
+section h1 {
+  margin-bottom: 12px;
+}
+
+section img {
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+section .chart h3 a {
+  color: #00a2ff;
+}
+
+section .contactdescription {
+  margin-top: -12px;
+  margin-left: -12px;
+}
+
+ul {
+  list-style: none;
+}
+
+.buscador {
+  margin-left: 16px;
+  height: 24px;
+  width: 260px;
+  text-align: center;
+  border: none;
+  border-radius: 15px;
+}
+
+.buybutton, .formbutton {
+  font-family: Oswald, sans-serif;
+  font-size: 16px;
+  border-style: solid;
+  color: white;
+  background-color: #00a2ff;
+  border-color: #00a2ff;
+  border-radius: 16px;
+  padding: 0px 8px 0px 8px;
+  height: 32px;
+  margin-bottom: 24px;
+}
+
+.formbutton {
+  margin: 12px 0px 12px 0px;
+}
+
+.item {
+  margin: 0px 24px 56px 24px;
+  padding: 12px 12px 0px 12px;
+  background-color: white;
+  border-radius: 15px;
+}
+
+.productos {
+  margin-top: 24px;
+  margin-bottom: -12px;
+}
+
+.searchbutton {
+  height: 24px;
+  width: 24px;
+}
