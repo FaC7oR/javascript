@@ -223,6 +223,38 @@ ul {
   margin-bottom: 24px;
 }
 
+.carritofloat{
+  width: 300px;
+  bottom: 40px;
+  right: 20px;
+}
+
+.carritofloat div div{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #00a2ff;
+  border-color: #00a2ff;
+  text-align: center;
+}
+
+.carritofloat div div h3{
+  padding-top: 8px;
+  padding-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 2px 2px #000000;
+}
+
+.carritofloat div nav{
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: #ffffff;
+  border-color: #ffffff;
+}
+
+.carritofloat div nav h4{
+  padding: 18px 0px 20px 20px;
+}
+
 .formbutton {
   margin: 12px 0px 12px 0px;
 }
@@ -242,4 +274,12 @@ ul {
 .searchbutton {
   height: 24px;
   width: 24px;
+}
+
+.shownav{
+  display: block;
+}
+
+.hidenav{
+  display: none;
 }

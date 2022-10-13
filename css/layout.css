@@ -25,10 +25,6 @@
     footer{
         display: none;
     }
-
-    .easteregg{
-        display: block;
-    }
     
 }
 
@@ -240,6 +236,13 @@ div#search{
 
 .buscador{
     vertical-align: top;
+}
+
+.carritofloat{
+    display: flex;
+    flex-flow: column nowrap;
+    position: fixed;
+    z-index: 1;
 }
 
 .productos{
