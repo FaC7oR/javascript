@@ -245,6 +245,16 @@ div#search{
     z-index: 1;
 }
 
+.carritotestbutton{
+    position: fixed;
+    z-index: 1;
+}
+
+#place_holder{
+    position: relative;
+    z-index: 0;
+}
+
 .productos{
     display: flex;
     flex-flow: row wrap;

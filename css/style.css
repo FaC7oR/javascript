@@ -233,6 +233,12 @@ ul {
   right: 20px;
 }
 
+.carritotestbutton{
+  width: 60px;
+  bottom: 40px;
+  right: 340px;
+}
+
 .carritofloat div div{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -268,6 +274,11 @@ ul {
   padding: 12px 12px 0px 12px;
   background-color: white;
   border-radius: 15px;
+}
+
+#place_holder{
+  top: 8px;
+  left: 8px;
 }
 
 .productos {

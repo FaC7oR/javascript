@@ -24,13 +24,11 @@ document.getElementById("carrito.clear").onclick = () => {
     document.getElementById("carrito_total").classList.add('hidenav');
     document.getElementById("carrito_total").classList.remove('shownav');
     for(const delnumber in counter_carrito){
-        if(parseInt(counter_carrito[delnumber].sum) != 0){
-            document.getElementById("item_carrito_"+delnumber).remove();
+        (parseInt(counter_carrito[delnumber].sum) != 0) && document.getElementById("item_carrito_"+delnumber).remove();  /* USO DE OPERADOR LÓGICO */
         }
         counter_carrito[delnumber].sum=0;
         total=0;
     }
-}
 
 /* AQUÍ TRAEMOS LOS PRODUCTOS QUE SE ENCUENTRAN EN EL HTML HACIA UNA VARIABLE */
 
@@ -119,5 +117,58 @@ function carrito_handler_start(producto,precio,sum,element){
     document.getElementById("item_text_"+element).innerHTML = producto+" "+"$"+subtotal;
 
 }
+
+let intentos=0;
+
+/* DECLARAMOS ESTO PARA IMPLEMENTAR LA LIBRERIA SWEET ALERT */
+botoncito=document.getElementById("botoncito");
+botoncito.onclick = () => {
+    swal({
+        title: "Excelente",
+        text: "Presionaste este botón, pero... ¿para qué? ¿con qué fin?",
+        icon: "success",
+        button: "Cerrar con tristeza, cuestionándome mi propia existencia",
+      });
+    intentos++; /* ESTO SE UTILIZARÁ EN UNA PROMESA MÁS ADELANTE */
+}
+
+/* ESTA FUNCIÓN OBTIENE LA HORA ACTUAL */
+function get_time_now(){
+    let now = luxon.DateTime.now().toLocaleString(luxon.DateTime.DATETIME_MED);
+    console.log(now,"con exactamente",luxon.DateTime.now().second,"segundos");
+}
+
+/* APLICAMOS ASINCRONÍA PARA VER LA HORA SEGUNDO A SEGUNDO POR CONSOLA */
+setInterval(get_time_now, 1000);
+
+/* IMPLEMENTAMOS UNA PROMESA */
+let taskcompleted = (intentos) =>{
+    return new Promise( (resolve, reject) => {
+        (intentos>=2) ? resolve("Lo prometido es deuda kuchau") : reject("Te fallé :(")
+    })
+}
+
+/* ESTO ES UN EASTER EGG, SI PRESIONAMOS EL BOTONCITO ROSA DE LA PÁGINA 2 VECES ANTES DE LOS 10 SEGUNDOS
+QUE LLEVE ABIERTA, NOS DEJARÁ UN MENSAJE EN LA CONSOLA CON EL RESULTADO DEL RESOLVE DE LA PROMESA */
+
+setTimeout( () => {
+    console.log(taskcompleted(intentos)
+        .then( (response) => { console.log(response) }) 
+        .catch( (error) => { console.log(error) }) 
+        .finally( () => { console.log("FIN DEL EASTER EGG :(") })         
+        );
+}, 10000)
+
+/* VAMOS A UTILIZAR UN FETCH E IR RECORRIENDO Y ESCRIBIENDO LOS TITULOS OBTENIDOS
+DE LOS POSTS DE JSONPLACEHOLDER Y MOSTRARLOS EN UNA SECCIÓN EN NUESTRO SITIO */
+
+k = 0;
+placeholder = document.getElementById("place_holder");
+
+setInterval( () => {
+    fetch('https://jsonplaceholder.typicode.com/posts')
+        .then((response) => response.json())
+        .then((json) => { placeholder.innerHTML = json[k].title; (k<99) ? k++ : k=0; }); 
+}, 1000)
 
 }, 500);
