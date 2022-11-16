@@ -25,10 +25,10 @@ document.getElementById("carrito.clear").onclick = () => {
     document.getElementById("carrito_total").classList.remove('shownav');
     for(const delnumber in counter_carrito){
         (parseInt(counter_carrito[delnumber].sum) != 0) && document.getElementById("item_carrito_"+delnumber).remove();  /* USO DE OPERADOR LÓGICO */
-        }
         counter_carrito[delnumber].sum=0;
         total=0;
     }
+}
 
 /* AQUÍ TRAEMOS LOS PRODUCTOS QUE SE ENCUENTRAN EN EL HTML HACIA UNA VARIABLE */
 
